@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 460" width="100%" height="100%">
+  <defs>
+    <style>
+      .font-sans { font-family: "SF Pro Display", "-apple-system", "BlinkMacSystemFont", "Segoe UI", Roboto, "Helvetica Neue", sans-serif; }
+      .font-mono { font-family: "SF Mono", "Fira Code", "Cascadia Code", Menlo, Monaco, Consolas, monospace; }
+    </style>
+    <marker id="arrowLight" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#0D9488" />
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1000" height="460" fill="#FFFFFF" />
+
+  <!-- title -->
+  <text x="30" y="38" class="font-sans" font-size="16" font-weight="600" fill="#0F172A">LLM Adviser — component overview</text>
+  <text x="30" y="58" class="font-mono" font-size="11" fill="#94A3B8">patterns and component roles, not concrete service names</text>
+
+  <!-- 4 stage boxes -->
+  <!-- Ingestion -->
+  <rect x="30" y="90" width="215" height="120" rx="12" fill="#F8FAFC" stroke="#0D9488" stroke-width="1.5"/>
+  <text x="137" y="118" text-anchor="middle" class="font-sans" font-size="13" font-weight="600" fill="#0D9488">Ingestion layer</text>
+  <text x="137" y="145" text-anchor="middle" class="font-mono" font-size="10.5" fill="#475569">OCR</text>
+  <text x="137" y="163" text-anchor="middle" class="font-mono" font-size="10.5" fill="#475569">provenance preservation</text>
+  <text x="137" y="181" text-anchor="middle" class="font-mono" font-size="10.5" fill="#475569">document parsing / chunking</text>
+
+  <!-- Retrieval -->
+  <rect x="277" y="90" width="215" height="120" rx="12" fill="#F8FAFC" stroke="#0D9488" stroke-width="1.5"/>
+  <text x="384" y="118" text-anchor="middle" class="font-sans" font-size="13" font-weight="600" fill="#0D9488">Retrieval layer</text>
+  <text x="384" y="141" text-anchor="middle" class="font-mono" font-size="10.5" fill="#475569">hybrid: BM25 + vector search</text>
+  <text x="384" y="159" text-anchor="middle" class="font-mono" font-size="10.5" fill="#475569">parent-document recovery</text>
+  <text x="384" y="177" text-anchor="middle" class="font-mono" font-size="10.5" fill="#475569">GraphRAG · reranking</text>
+
+  <!-- Generation -->
+  <rect x="524" y="90" width="215" height="120" rx="12" fill="#F8FAFC" stroke="#0D9488" stroke-width="1.5"/>
+  <text x="631" y="118" text-anchor="middle" class="font-sans" font-size="13" font-weight="600" fill="#0D9488">Generation layer</text>
+  <text x="631" y="145" text-anchor="middle" class="font-mono" font-size="10.5" fill="#475569">source-grounded generation</text>
+  <text x="631" y="163" text-anchor="middle" class="font-mono" font-size="10.5" fill="#475569">multi-provider LLM routing</text>
+  <text x="631" y="181" text-anchor="middle" class="font-mono" font-size="10.5" fill="#475569">LLM evaluation</text>
+
+  <!-- Execution -->
+  <rect x="771" y="90" width="200" height="120" rx="12" fill="#F8FAFC" stroke="#10B981" stroke-width="1.5"/>
+  <text x="871" y="118" text-anchor="middle" class="font-sans" font-size="13" font-weight="600" fill="#0D9488">Execution layer</text>
+  <text x="871" y="141" text-anchor="middle" class="font-mono" font-size="10.5" fill="#475569">FastAPI · async workers</text>
+  <text x="871" y="159" text-anchor="middle" class="font-mono" font-size="10.5" fill="#475569">Redis · observability</text>
+  <text x="871" y="177" text-anchor="middle" class="font-mono" font-size="10.5" fill="#475569">CI quality gates</text>
+
+  <!-- arrows between stages -->
+  <line x1="245" y1="150" x2="273" y2="150" stroke="#0D9488" stroke-width="2" marker-end="url(#arrowLight)"/>
+  <line x1="492" y1="150" x2="520" y2="150" stroke="#0D9488" stroke-width="2" marker-end="url(#arrowLight)"/>
+  <line x1="739" y1="150" x2="767" y2="150" stroke="#0D9488" stroke-width="2" marker-end="url(#arrowLight)"/>
+
+  <!-- traceability feedback line -->
+  <path d="M 137 210 C 137 300, 631 300, 631 214" fill="none" stroke="#10B981" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arrowLight)"/>
+  <text x="384" y="300" text-anchor="middle" class="font-mono" font-size="10.5" fill="#0D9488">provenance → every generated claim traces back to source</text>
+
+  <!-- boundary note -->
+  <rect x="30" y="340" width="941" height="90" rx="12" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="500" y="368" text-anchor="middle" class="font-sans" font-size="12.5" font-weight="600" fill="#0F172A">Domain / infrastructure boundary</text>
+  <text x="500" y="392" text-anchor="middle" class="font-mono" font-size="10.5" fill="#64748B">domain logic (retrieval strategy, answer construction) is testable without live LLM calls or a running queue —</text>
+  <text x="500" y="410" text-anchor="middle" class="font-mono" font-size="10.5" fill="#64748B">swapping a provider, queue backend, or storage layer does not touch domain code</text>
+</svg>
