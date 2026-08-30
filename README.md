@@ -1,6 +1,7 @@
 # LLM Adviser — Case Study
 
 **Role:** Technical Lead · **Team:** 5 engineers · **Status:** in production
+**Last reviewed:** 2026-08-30
 
 LLM Adviser is an agentic engineering knowledge platform: it turns scattered internal
 documentation into deterministic, traceable answers for engineers. This repository is a
