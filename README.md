@@ -1,5 +1,7 @@
 # LLM Adviser — Case Study
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 **Role:** Technical Lead · **Team:** 5 engineers · **Status:** in production
 **Last reviewed:** 2026-08-30
 
