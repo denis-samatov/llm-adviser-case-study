@@ -5,8 +5,8 @@
 **Role:** Technical Lead · **Team:** 5 engineers · **Status:** in production
 **Last reviewed:** 2026-08-30
 
-LLM Adviser is an agentic engineering knowledge platform: it turns scattered internal
-documentation into deterministic, traceable answers for engineers. This repository is a
+LLM Adviser is an agentic engineering knowledge platform: it combines deterministic document processing with source-traceable
+answers for engineers. This repository is a
 sanitized case study of the architecture and design decisions — the platform itself is
 closed-source institutional work, so no client code, data, or proprietary logic is
 published here. See [`docs/limitations.md`](docs/limitations.md) for exactly what that
@@ -37,7 +37,7 @@ like any other production system, not just spot-checked by hand.
 
 ## Architecture
 
-See [`docs/architecture.md`](docs/architecture.md) for the component breakdown and data
+Start with the [design trade-offs](docs/trade-offs.md), then see [`docs/architecture.md`](docs/architecture.md) for the component breakdown and data
 flow — described as patterns (e.g. "async workers + Redis + multi-provider LLM routing"),
 not as concrete service names or endpoints.
 

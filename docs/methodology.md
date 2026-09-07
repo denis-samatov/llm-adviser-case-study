@@ -23,9 +23,9 @@ match), then reranks the merged candidate set before it reaches generation. The 
 retrieval modes cover different query shapes: BM25 is strong on exact terms and
 identifiers that embeddings can blur together; vector search is strong on paraphrased
 or conceptual queries that share no exact wording with the source text. Combining both
-and reranking the union outperforms either alone on a knowledge base with mixed query
-patterns — which is the general justification for hybrid retrieval in RAG systems, and
-the reason it's used here rather than a single retrieval mode.
+and reranking the union is the design choice used here for mixed query patterns. Its
+benefit over either method alone needs a matched evaluation on the same query set;
+this case study does not publish that ablation or claim a measured improvement.
 
 ## Parent-document recovery
 
