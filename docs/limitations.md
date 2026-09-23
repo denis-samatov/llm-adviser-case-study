@@ -22,14 +22,12 @@ credibility rather than weaken it.
 
 ## Structural limitation of this format
 
-This is a write-up, not the running system — a reader can verify what's stated here
-against public sources (the arXiv preprint, ORCID, and journal publication linked from
-the [GitHub profile](https://github.com/denis-samatov) cover the research side of the
-work), but can't independently inspect this platform's code or its actual production
-metrics, because it's closed-source institutional work. That's a real constraint on how
-much this document alone can prove — it's disclosed here rather than glossed over, and
-the honest next step for anyone who wants more than this document can offer is a
-conversation, not a bigger claim.
+This is an author-reported write-up, not the running system. Its architecture,
+deployment status and evaluation process cannot be independently verified from this
+repository. Research links on the [GitHub profile](https://github.com/denis-samatov)
+cover separate work and do not validate claims about LLM Adviser. The case study is
+useful for discussing design choices, but it is not evidence of measured results or
+operational performance.
 
 ## Why publish limitations at all
 

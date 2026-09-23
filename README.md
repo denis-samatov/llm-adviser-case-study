@@ -1,8 +1,6 @@
 # LLM Adviser — Case Study
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-**Role:** Technical Lead · **Team:** 5 engineers · **Status:** in production
+**Author-reported role:** Technical Lead · **Team:** 5 engineers · **Reported status:** deployed privately
 **Last reviewed:** 2026-08-30
 
 LLM Adviser is an agentic engineering knowledge platform: it combines deterministic document processing with source-traceable
@@ -11,6 +9,11 @@ sanitized case study of the architecture and design decisions — the platform i
 closed-source institutional work, so no client code, data, or proprietary logic is
 published here. See [`docs/limitations.md`](docs/limitations.md) for exactly what that
 excludes.
+
+The role, deployment and implementation details are the author's account. This public
+repository does not contain the platform, CI logs, evaluation data or operational
+records needed to verify them independently. The synthetic example illustrates the
+design; it is not an output captured from the private system.
 
 ## Problem
 

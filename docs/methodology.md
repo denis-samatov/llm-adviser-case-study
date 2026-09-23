@@ -1,9 +1,8 @@
 # Methodology
 
 How the core technical ideas are implemented, described generically enough to be
-reusable outside this specific platform — everything below is grounded in the
-already-public scope of the role; nothing here asserts proprietary implementation
-choices that haven't been disclosed elsewhere.
+reusable outside this specific platform. It reflects the author's published account;
+the private implementation is outside the verification scope of this repository.
 
 ## Ingestion & provenance
 
