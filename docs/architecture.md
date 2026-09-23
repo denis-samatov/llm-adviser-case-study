@@ -1,9 +1,8 @@
 # Architecture
 
 This describes *patterns and component roles*, not concrete service names, internal
-hostnames, or endpoints. Everything below maps directly to the verified, already-public
-scope of the role (résumé / GitHub profile) — nothing here claims implementation details
-beyond that.
+hostnames, or endpoints. The components below reflect the author's published account;
+the private implementation and deployment cannot be audited from this repository.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../assets/architecture-dark.svg">

@@ -1,10 +1,10 @@
 # Evaluation
 
-How quality is measured — methodology, not invented numbers. This case study states
-that automated evaluation is part of the platform's CI quality gates because that's
-already public (résumé/GitHub), but doesn't publish specific score thresholds or
-client-tied result numbers, for the same reason the rest of this repository excludes
-client-specific detail — see [`limitations.md`](limitations.md).
+This document describes the author's evaluation approach, not a reproducible public
+evaluation. The author reports automated evaluation in private CI, but this repository
+does not include the workflows, fixtures, scores or logs needed to verify that claim.
+Specific thresholds and client-tied results are withheld; see
+[`limitations.md`](limitations.md).
 
 ## What "quality" means for a source-grounded RAG platform
 
