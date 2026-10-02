@@ -10,7 +10,7 @@ credibility rather than weaken it.
 - **Client identity and internal names.** Service names, internal URLs, team names, and
   anything that would identify the client or their infrastructure are generalized or
   omitted.
-- **Proprietary data.** No real documents, logs, or outputs from the production system
+- **Proprietary data.** No real documents, logs, or outputs from the institutional system
   appear here. Any example in [`examples/`](../examples/) is synthetic.
 - **Specific LLM providers.** Multi-provider routing is described as a pattern; which
   providers are actually used is an operational/commercial detail, not disclosed.
