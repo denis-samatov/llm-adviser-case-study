@@ -15,6 +15,15 @@ repository does not contain the platform, CI logs, evaluation data or operationa
 records needed to verify them independently. The synthetic example illustrates the
 design; it is not an output captured from the private system.
 
+## At a glance
+
+| | |
+|---|---|
+| **What** | Architecture of a knowledge platform over geological and reservoir-simulation literature: every answer traces back to the source passage it came from. |
+| **Delivered** | Document ingestion and cataloguing: OCR (PaddleOCR-VL), DOC/DJVU/CHM → PDF conversion with provenance, immutable manifests, PostgreSQL registry, Redis/RQ workers. |
+| **Next** | Hybrid retrieval, reranking and source-grounded generation (pre-release). |
+| **Read in two minutes** | The [architecture diagram](docs/architecture.md), then the [synthetic traceable-answer example](examples/README.md). This repository has no runnable code. |
+
 ## Problem
 
 Engineering knowledge tends to live scattered across wikis, design docs, and code
