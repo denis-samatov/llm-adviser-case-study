@@ -22,7 +22,7 @@ design; it is not an output captured from the private system.
 | **What** | Architecture of a knowledge platform over geological and reservoir-simulation literature: every answer traces back to the source passage it came from. |
 | **Delivered** | Document ingestion and cataloguing: OCR (PaddleOCR-VL), DOC/DJVU/CHM → PDF conversion with provenance, immutable manifests, PostgreSQL registry, Redis/RQ workers. |
 | **Next** | Hybrid retrieval, reranking and source-grounded generation (pre-release). |
-| **Read in two minutes** | The [architecture diagram](docs/architecture.md), then the [synthetic traceable-answer example](examples/README.md). This repository has no runnable code. |
+| **Read in two minutes** | The [architecture diagram](docs/architecture.md), then the [synthetic traceable-answer example](examples/README.md). The platform implementation is not included; a small synthetic provenance contract is runnable. |
 
 ## Problem
 
@@ -80,3 +80,11 @@ GraphRAG · reranking
 architecture, trade-offs, and results in a call —
 [Telegram @SamatovDS](https://t.me/SamatovDS) ·
 [denissamatov470@gmail.com](mailto:denissamatov470@gmail.com).*
+
+## Reproducible public contract
+
+`python examples/provenance_demo.py` emits an authored synthetic manifest with
+source hashes and exact Unicode-character spans. `python -m unittest discover -s tests` verifies deterministic identity, source-revision changes and exact passage
+recovery without dependencies, credentials or external services. This example
+illustrates a provenance contract only: it is not copied private platform code,
+not an LLM output, and does not establish retrieval quality or operational use.
