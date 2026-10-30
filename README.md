@@ -88,3 +88,7 @@ source hashes and exact Unicode-character spans. `python -m unittest discover -s
 recovery without dependencies, credentials or external services. This example
 illustrates a provenance contract only: it is not copied private platform code,
 not an LLM output, and does not establish retrieval quality or operational use.
+
+## Public content checks
+
+Run `python .ci/check_content.py` to check local document links and heading anchors, balanced fenced examples, and linked SVG XML. The dependency-free CI runs the same command on pushes and pull requests. It does not contact external URLs or verify private-system, employment, model-effectiveness or deployment claims.
